@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Mail, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -28,7 +28,10 @@ const Contact = () => {
               <Mail size={18} />
               Contact Me
             </button>
-            <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-transparent border border-gray-700 text-white px-8 py-4 rounded-full text-sm font-semibold hover:border-white transition-colors">
+            <button 
+              className="w-full sm:w-auto flex items-center justify-center gap-2 bg-transparent border border-gray-700 text-white px-8 py-4 rounded-full text-sm font-semibold hover:border-white transition-colors"
+              aria-label="Download CV"
+            >
               <Download size={18} />
               Download CV
             </button>

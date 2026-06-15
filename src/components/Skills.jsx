@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 
 const skillsList = [
@@ -22,7 +22,7 @@ const Skills = () => {
         <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-4xl mx-auto">
           {skillsList.map((skill, index) => (
             <motion.div
-              key={index}
+              key={skill}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

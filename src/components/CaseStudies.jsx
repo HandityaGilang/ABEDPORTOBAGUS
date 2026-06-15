@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 
 const cases = [
@@ -33,7 +33,7 @@ const CaseStudies = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {cases.map((item, index) => (
           <motion.div
-            key={index}
+            key={item.title}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Linkedin, Mail, Download, ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -38,6 +38,7 @@ const AboutPreview = () => {
                 src="/assets/Design front hero.png" 
                 alt="Portrait detail" 
                 className="w-full h-full object-cover object-top"
+                loading="lazy"
                 onError={(e) => {
                   e.target.src = "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80";
                 }}

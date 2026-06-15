@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -47,7 +47,7 @@ const ExperienceStrip = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gray-100 overflow-x-auto custom-scrollbar">
           {experiences.map((exp, index) => (
             <motion.div 
-              key={index}
+              key={exp.company}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -56,7 +56,16 @@ const ExperienceStrip = () => {
             >
               <div className="mb-8">
                 <div className="h-10 md:h-12 w-20 px-2 bg-white rounded-lg border border-gray-100 shadow-sm flex items-center justify-center mb-4 inline-flex overflow-hidden relative">
-                  <img src={exp.logoSrc} alt={exp.company} className="h-full w-full object-contain p-1.5 absolute inset-0" />
+                  <img 
+                    src={exp.logoSrc} 
+                    alt={exp.company} 
+                    className="h-full w-full object-contain p-1.5 absolute inset-0" 
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.parentElement.innerHTML = `<span class="text-[10px] font-bold tracking-wider">${exp.logoText}</span>`;
+                    }}
+                  />
                 </div>
                 <h4 className="font-bold text-sm mb-1">{exp.company}</h4>
                 <p className="text-xs text-gray-600 mb-2">{exp.role}</p>

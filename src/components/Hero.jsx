@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { MapPin, ArrowRight } from 'lucide-react';
 
 const Hero = () => {
@@ -41,7 +41,7 @@ const Hero = () => {
         <img 
           src="/assets/Design front hero.png" 
           alt="Abednego Lanang Wicaksono" 
-          className="absolute z-30 h-[390px] md:h-[clamp(430px,62vw,560px)] lg:h-[clamp(520px,58vw,680px)] w-auto left-1/2 bottom-[0px] lg:-bottom-[38px] -translate-x-1/2 object-contain drop-shadow-[0_24px_32px_rgba(0,0,0,0.18)]"
+          className="absolute z-20 h-[390px] md:h-[clamp(430px,62vw,560px)] lg:h-[clamp(520px,58vw,680px)] w-auto left-1/2 bottom-[0px] lg:-bottom-[38px] -translate-x-1/2 object-contain drop-shadow-[0_24px_32px_rgba(0,0,0,0.18)]"
         />
       </div>
 

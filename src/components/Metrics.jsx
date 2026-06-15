@@ -1,28 +1,29 @@
-import React from 'react';
 import { FileCheck, ShieldCheck, TrendingUp, BarChart2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+const iconMap = { FileCheck, ShieldCheck, TrendingUp, BarChart2 };
+
 const metrics = [
   {
-    icon: <FileCheck className="text-gray-400" size={24} />,
+    icon: "FileCheck",
     value: "10",
     label: "SOPs Approved",
     desc: "Standardization & Compliance"
   },
   {
-    icon: <ShieldCheck className="text-gray-400" size={24} />,
+    icon: "ShieldCheck",
     value: "32",
     label: "Hubs Audited",
     desc: "Operational & Compliance Audit"
   },
   {
-    icon: <TrendingUp className="text-gray-400" size={24} />,
+    icon: "TrendingUp",
     value: "95%",
     label: "Faster Checklist Creation",
     desc: "Process Improvement Impact"
   },
   {
-    icon: <BarChart2 className="text-gray-400" size={24} />,
+    icon: "BarChart2",
     value: "90%",
     label: "Faster Reporting",
     desc: "Data Analytics & Automation"
@@ -34,9 +35,11 @@ const Metrics = () => {
     <div className="px-4 md:px-12 relative z-20">
       <div className="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gray-100">
-          {metrics.map((metric, index) => (
+          {metrics.map((metric, index) => {
+            const Icon = iconMap[metric.icon];
+            return (
             <motion.div 
-              key={index}
+              key={metric.label}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -44,7 +47,7 @@ const Metrics = () => {
               className="p-6 flex items-start gap-4 hover:bg-gray-50 transition-colors"
             >
               <div className="p-3 bg-gray-50 rounded-lg border border-gray-100">
-                {metric.icon}
+                <Icon className="text-gray-400" size={24} />
               </div>
               <div>
                 <div className="flex items-baseline gap-2 mb-1">
@@ -54,7 +57,8 @@ const Metrics = () => {
                 <p className="text-xs text-gray-500">{metric.desc}</p>
               </div>
             </motion.div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>

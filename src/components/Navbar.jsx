@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
 const Navbar = () => {
@@ -20,7 +20,11 @@ const Navbar = () => {
         <a href="#contact" className="text-gray-500 hover:text-black transition-colors">Contact</a>
       </div>
 
-      <button className="flex items-center gap-2 bg-[#111] text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors shrink-0">
+      <button 
+        className="flex items-center gap-2 bg-[#111] text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors shrink-0"
+        onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+        aria-label="Navigate to contact section"
+      >
         Let's Connect
         <ArrowUpRight size={16} />
       </button>
@@ -28,4 +32,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default memo(Navbar);

@@ -1,12 +1,13 @@
-import React from 'react';
+import { lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Metrics from './components/Metrics';
-import ExperienceStrip from './components/ExperienceStrip';
-import AboutPreview from './components/AboutPreview';
-import Skills from './components/Skills';
-import CaseStudies from './components/CaseStudies';
-import Contact from './components/Contact';
+
+const ExperienceStrip = lazy(() => import('./components/ExperienceStrip'));
+const AboutPreview = lazy(() => import('./components/AboutPreview'));
+const Skills = lazy(() => import('./components/Skills'));
+const CaseStudies = lazy(() => import('./components/CaseStudies'));
+const Contact = lazy(() => import('./components/Contact'));
 
 function App() {
   return (
@@ -14,11 +15,13 @@ function App() {
       <Navbar />
       <Hero />
       <Metrics />
-      <ExperienceStrip />
-      <AboutPreview />
-      <Skills />
-      <CaseStudies />
-      <Contact />
+      <Suspense fallback={null}>
+        <ExperienceStrip />
+        <AboutPreview />
+        <Skills />
+        <CaseStudies />
+        <Contact />
+      </Suspense>
     </main>
   );
 }
