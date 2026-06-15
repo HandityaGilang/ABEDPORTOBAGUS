@@ -31,7 +31,7 @@ const metrics = [
 
 const Metrics = () => {
   return (
-    <div className="px-4 md:px-12 -mt-8 relative z-30">
+    <div className="px-4 md:px-12 relative z-20">
       <div className="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gray-100">
           {metrics.map((metric, index) => (

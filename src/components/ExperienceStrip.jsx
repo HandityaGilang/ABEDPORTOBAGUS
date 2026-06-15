@@ -7,25 +7,29 @@ const experiences = [
     company: "PT Astro Technologies Indonesia",
     role: "Technical Audit – SOP Deployment",
     period: "Sep 2025 – Present",
-    logoText: "ASTRO"
+    logoText: "ASTRO",
+    logoSrc: "https://prod-talentics-storage.s3.ap-southeast-1.amazonaws.com/organizations/111435/logos/1667969737_03aca11e63e8507b29d03a128ee9e1bd08258022.png"
   },
   {
     company: "PT Unilever Tbk",
     role: "Supply Chain Customer Operation – Intern",
     period: "Feb 2025 – Aug 2025",
-    logoText: "UNILEVER"
+    logoText: "UNILEVER",
+    logoSrc: "https://upload.wikimedia.org/wikipedia/id/3/37/Unilever.png"
   },
   {
     company: "PT JGC Indonesia",
     role: "Project Control & Administration – Intern",
     period: "Nov 2024 – Feb 2025",
-    logoText: "JGC"
+    logoText: "JGC",
+    logoSrc: "https://upload.wikimedia.org/wikipedia/commons/e/ec/JGC_Corporation_company_logo.png"
   },
   {
     company: "PT Kaldu Sari Nabati Indonesia",
     role: "Warehouse Inbound – Intern",
     period: "Jan 2023 – Feb 2023",
-    logoText: "NABATI"
+    logoText: "NABATI",
+    logoSrc: "https://upload.wikimedia.org/wikipedia/commons/8/88/Nabati_logo.svg"
   }
 ];
 
@@ -51,8 +55,8 @@ const ExperienceStrip = () => {
               className="p-6 md:p-8 flex flex-col justify-between hover:bg-gray-50 transition-colors min-w-[250px]"
             >
               <div className="mb-8">
-                <div className="h-10 w-10 md:h-12 md:w-auto md:px-4 bg-gray-100 rounded-lg border border-gray-200 flex items-center justify-center mb-4 md:inline-flex">
-                  <span className="text-xs font-bold tracking-wider text-gray-600">{exp.logoText}</span>
+                <div className="h-10 md:h-12 w-20 px-2 bg-white rounded-lg border border-gray-100 shadow-sm flex items-center justify-center mb-4 inline-flex overflow-hidden relative">
+                  <img src={exp.logoSrc} alt={exp.company} className="h-full w-full object-contain p-1.5 absolute inset-0" />
                 </div>
                 <h4 className="font-bold text-sm mb-1">{exp.company}</h4>
                 <p className="text-xs text-gray-600 mb-2">{exp.role}</p>
