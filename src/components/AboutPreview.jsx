@@ -35,7 +35,7 @@ const AboutPreview = () => {
           >
             <div className="w-full h-full bg-gray-100 rounded-lg overflow-hidden">
                <img 
-                src="/assets/Design front hero.png" 
+                src="/assets/design-front-hero.png" 
                 alt="Portrait detail" 
                 className="w-full h-full object-cover object-top"
                 loading="lazy"

@@ -39,7 +39,7 @@ const Hero = () => {
           className="absolute z-10 w-[760px] md:w-[clamp(700px,120vw,980px)] lg:w-[clamp(900px,76vw,1280px)] max-w-none left-1/2 top-[30%] lg:top-[42%] -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-95 lg:opacity-100 object-contain"
         />
         <img 
-          src="/assets/Design front hero.png" 
+          src="/assets/design-front-hero.png" 
           alt="Abednego Lanang Wicaksono" 
           className="absolute z-20 h-[390px] md:h-[clamp(430px,62vw,560px)] lg:h-[clamp(520px,58vw,680px)] w-auto left-1/2 bottom-[0px] lg:-bottom-[38px] -translate-x-1/2 object-contain drop-shadow-[0_24px_32px_rgba(0,0,0,0.18)]"
         />
