@@ -34,19 +34,19 @@ const Hero = () => {
       {/* MIDDLE STAGE (ABSOLUTE LAYERING) */}
       <div className="relative z-0 h-[430px] md:h-[520px] lg:h-[560px] min-w-0 overflow-visible mt-6 lg:mt-0">
         <img 
-          src="/assets/font hero.png" 
+          src="/assets/font-hero.png" 
           alt="Abednego Typography" 
           className="absolute z-10 w-[760px] md:w-[clamp(700px,120vw,980px)] lg:w-[clamp(900px,76vw,1280px)] max-w-none left-1/2 top-[30%] lg:top-[42%] -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-95 lg:opacity-100 object-contain"
         />
         <img 
           src="/assets/design-front-hero.png" 
           alt="Abednego Lanang Wicaksono" 
-          className="absolute z-20 h-[390px] md:h-[clamp(430px,62vw,560px)] lg:h-[clamp(520px,58vw,680px)] w-auto left-1/2 bottom-[0px] lg:-bottom-[38px] -translate-x-1/2 object-contain drop-shadow-[0_24px_32px_rgba(0,0,0,0.18)]"
+          className="absolute z-20 h-[250px] md:h-[clamp(340px,50vw,450px)] lg:h-[clamp(420px,46vw,550px)] w-auto left-1/2 bottom-[0px] lg:-bottom-[38px] -translate-x-1/2 object-contain drop-shadow-[0_24px_32px_rgba(0,0,0,0.18)]"
         />
       </div>
 
       {/* RIGHT COLUMN */}
-      <div className="z-20 lg:self-center lg:pt-[180px] px-[22px] lg:px-0 lg:pr-[clamp(24px,4vw,64px)] pb-12 lg:pb-0 flex flex-col items-center lg:items-end mt-8 lg:mt-0">
+      <div className="z-20 lg:self-end lg:pb-[clamp(24px,4vh,80px)] px-[22px] lg:px-0 lg:pr-[clamp(24px,4vw,64px)] pb-12 lg:pb-0 flex flex-col items-center lg:items-end mt-8 lg:mt-0">
         <div className="flex items-center gap-2 mb-8 lg:absolute lg:top-[90px] lg:right-[clamp(24px,4vw,64px)] text-gray-600 text-[14px] lg:text-[15px]">
           <MapPin size={18} className="text-[#111]" />
           <span>Tangerang Selatan, Indonesia</span>
